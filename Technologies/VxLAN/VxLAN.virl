@@ -1,0 +1,2406 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.95" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.95/virl.xsd">
+    <node name="nx-osv-1" type="SIMPLE" subtype="NX-OSv" location="756,386">
+        <extensions>
+            <entry key="config" type="String">!Command: show running-config
+!Time: Mon Mar  5 09:00:22 2018
+
+version 7.3(0)D1(1)
+power redundancy-mode redundant
+
+vdc switch id 1
+  limit-resource module-type m1 m1xl m2xl f2e 
+  allocate interface Ethernet2/1-48
+  allocate interface Ethernet3/1-48
+  allocate interface Ethernet4/1-48
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 768
+  limit-resource u4route-mem minimum 96 maximum 96
+  limit-resource u6route-mem minimum 24 maximum 24
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+username admin password 5 $5$Otc7T0NC$K.ulnSZnSyXLrTGNBdtLgZJXEa8EeNx.BrdZ98XyK2C  role network-admin
+no password strength-check
+ip domain-lookup
+vlan dot1Q tag native
+system default switchport
+system jumbomtu 0
+no logging event trunk-status enable
+copp profile strict
+snmp-server user admin auth md5 0x328945d53e05e8e7207f8c20b142f0b7 priv 0x328945d53e05e8e7207f8c20b142f0b7 localizedkey engineID 128:0:0:9:3:0:0:0:0:0:0
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps link
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+
+vlan 1
+
+vrf context management
+
+interface mgmt0
+  vrf member management
+
+interface Ethernet2/1
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/2
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/3
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/4
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/5
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/6
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/7
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/8
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/9
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/10
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/11
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/12
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/13
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/14
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/15
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/16
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/17
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/18
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/19
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/20
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/21
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/22
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/23
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/24
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/25
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/26
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/27
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/28
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/29
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/30
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/31
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/32
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/33
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/34
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/35
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/36
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/37
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/38
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/39
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/40
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/41
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/42
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/43
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/44
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/45
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/46
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/47
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/48
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet3/1
+  switchport
+  no shutdown
+
+interface Ethernet3/2
+  switchport
+  no shutdown
+
+interface Ethernet3/3
+  switchport
+  no shutdown
+
+interface Ethernet3/4
+  switchport
+  no shutdown
+
+interface Ethernet3/5
+  switchport
+  no shutdown
+
+interface Ethernet3/6
+  switchport
+  no shutdown
+
+interface Ethernet3/7
+  switchport
+  no shutdown
+
+interface Ethernet3/8
+  switchport
+  no shutdown
+
+interface Ethernet3/9
+  switchport
+  no shutdown
+
+interface Ethernet3/10
+  switchport
+  no shutdown
+
+interface Ethernet3/11
+  switchport
+  no shutdown
+
+interface Ethernet3/12
+  switchport
+  no shutdown
+
+interface Ethernet3/13
+  switchport
+  no shutdown
+
+interface Ethernet3/14
+  switchport
+  no shutdown
+
+interface Ethernet3/15
+  switchport
+  no shutdown
+
+interface Ethernet3/16
+  switchport
+  no shutdown
+
+interface Ethernet3/17
+  switchport
+  no shutdown
+
+interface Ethernet3/18
+  switchport
+  no shutdown
+
+interface Ethernet3/19
+  switchport
+  no shutdown
+
+interface Ethernet3/20
+  switchport
+  no shutdown
+
+interface Ethernet3/21
+  switchport
+  no shutdown
+
+interface Ethernet3/22
+  switchport
+  no shutdown
+
+interface Ethernet3/23
+  switchport
+  no shutdown
+
+interface Ethernet3/24
+  switchport
+  no shutdown
+
+interface Ethernet3/25
+  switchport
+  no shutdown
+
+interface Ethernet3/26
+  switchport
+  no shutdown
+
+interface Ethernet3/27
+  switchport
+  no shutdown
+
+interface Ethernet3/28
+  switchport
+  no shutdown
+
+interface Ethernet3/29
+  switchport
+  no shutdown
+
+interface Ethernet3/30
+  switchport
+  no shutdown
+
+interface Ethernet3/31
+  switchport
+  no shutdown
+
+interface Ethernet3/32
+  switchport
+  no shutdown
+
+interface Ethernet3/33
+  switchport
+  no shutdown
+
+interface Ethernet3/34
+  switchport
+  no shutdown
+
+interface Ethernet3/35
+  switchport
+  no shutdown
+
+interface Ethernet3/36
+  switchport
+  no shutdown
+
+interface Ethernet3/37
+  switchport
+  no shutdown
+
+interface Ethernet3/38
+  switchport
+  no shutdown
+
+interface Ethernet3/39
+  switchport
+  no shutdown
+
+interface Ethernet3/40
+  switchport
+  no shutdown
+
+interface Ethernet3/41
+  switchport
+  no shutdown
+
+interface Ethernet3/42
+  switchport
+  no shutdown
+
+interface Ethernet3/43
+  switchport
+  no shutdown
+
+interface Ethernet3/44
+  switchport
+  no shutdown
+
+interface Ethernet3/45
+  switchport
+  no shutdown
+
+interface Ethernet3/46
+  switchport
+  no shutdown
+
+interface Ethernet3/47
+  switchport
+  no shutdown
+
+interface Ethernet3/48
+  switchport
+  no shutdown
+
+interface Ethernet4/1
+  switchport
+
+interface Ethernet4/2
+  switchport
+
+interface Ethernet4/3
+  switchport
+
+interface Ethernet4/4
+  switchport
+
+interface Ethernet4/5
+  switchport
+
+interface Ethernet4/6
+  switchport
+
+interface Ethernet4/7
+  switchport
+
+interface Ethernet4/8
+  switchport
+
+interface Ethernet4/9
+  switchport
+
+interface Ethernet4/10
+  switchport
+
+interface Ethernet4/11
+  switchport
+
+interface Ethernet4/12
+  switchport
+
+interface Ethernet4/13
+  switchport
+
+interface Ethernet4/14
+  switchport
+
+interface Ethernet4/15
+  switchport
+
+interface Ethernet4/16
+  switchport
+
+interface Ethernet4/17
+  switchport
+
+interface Ethernet4/18
+  switchport
+
+interface Ethernet4/19
+  switchport
+
+interface Ethernet4/20
+  switchport
+
+interface Ethernet4/21
+  switchport
+
+interface Ethernet4/22
+  switchport
+
+interface Ethernet4/23
+  switchport
+
+interface Ethernet4/24
+  switchport
+
+interface Ethernet4/25
+  switchport
+
+interface Ethernet4/26
+  switchport
+
+interface Ethernet4/27
+  switchport
+
+interface Ethernet4/28
+  switchport
+
+interface Ethernet4/29
+  switchport
+
+interface Ethernet4/30
+  switchport
+
+interface Ethernet4/31
+  switchport
+
+interface Ethernet4/32
+  switchport
+
+interface Ethernet4/33
+  switchport
+
+interface Ethernet4/34
+  switchport
+
+interface Ethernet4/35
+  switchport
+
+interface Ethernet4/36
+  switchport
+
+interface Ethernet4/37
+  switchport
+
+interface Ethernet4/38
+  switchport
+
+interface Ethernet4/39
+  switchport
+
+interface Ethernet4/40
+  switchport
+
+interface Ethernet4/41
+  switchport
+
+interface Ethernet4/42
+  switchport
+
+interface Ethernet4/43
+  switchport
+
+interface Ethernet4/44
+  switchport
+
+interface Ethernet4/45
+  switchport
+
+interface Ethernet4/46
+  switchport
+
+interface Ethernet4/47
+  switchport
+
+interface Ethernet4/48
+  switchport
+line console
+line vty
+boot kickstart bootflash:/titanium-d1-kickstart.7.3.0.D1.1.bin
+boot system bootflash:/titanium-d1.7.3.0.D1.1.bin</entry>
+        </extensions>
+        <interface id="0" name="Ethernet2/1"/>
+        <interface id="1" name="Ethernet2/2"/>
+        <interface id="2" name="Ethernet2/3"/>
+    </node>
+    <node name="nx-osv-2" type="SIMPLE" subtype="NX-OSv" location="1030,382">
+        <extensions>
+            <entry key="config" type="String">!Command: show running-config
+!Time: Mon Mar  5 11:13:30 2018
+
+version 7.3(0)D1(1)
+power redundancy-mode redundant
+license grace-period
+
+hostname NXOS2
+vdc NXOS2 id 1
+  limit-resource module-type m1 m1xl m2xl f2e 
+  allocate interface Ethernet2/1-48
+  allocate interface Ethernet3/1-48
+  allocate interface Ethernet4/1-48
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 768
+  limit-resource u4route-mem minimum 96 maximum 96
+  limit-resource u6route-mem minimum 24 maximum 24
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+feature ospf
+feature pim
+
+username admin password 5 $5$Otc7T0NC$K.ulnSZnSyXLrTGNBdtLgZJXEa8EeNx.BrdZ98XyK2C  role network-admin
+no password strength-check
+ip domain-lookup
+vlan dot1Q tag native
+system default switchport
+system jumbomtu 0
+no logging event trunk-status enable
+copp profile strict
+snmp-server user admin auth md5 0x328945d53e05e8e7207f8c20b142f0b7 priv 0x328945d53e05e8e7207f8c20b142f0b7 localizedkey engineID 128:0:0:9:3:0:0:0:0:0:0
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps link
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+
+ip pim rp-address 2.2.2.2 group-list 224.0.0.0/4
+ip pim ssm range 232.0.0.0/8
+vlan 1
+
+vrf context management
+
+interface mgmt0
+  vrf member management
+
+interface Ethernet2/1
+  no switchport
+  mac-address 0000.0000.002f
+  ip address 192.12.12.2/24
+  ip ospf network point-to-point
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet2/2
+  no switchport
+  mac-address 0000.0000.002f
+  ip address 192.22.22.2/24
+  ip ospf network point-to-point
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet2/3
+  no switchport
+  mac-address 0000.0000.002f
+  ip address 192.32.32.2/24
+  ip ospf network point-to-point
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet2/4
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/5
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/6
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/7
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/8
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/9
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/10
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/11
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/12
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/13
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/14
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/15
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/16
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/17
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/18
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/19
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/20
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/21
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/22
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/23
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/24
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/25
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/26
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/27
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/28
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/29
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/30
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/31
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/32
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/33
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/34
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/35
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/36
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/37
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/38
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/39
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/40
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/41
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/42
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/43
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/44
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/45
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/46
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/47
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet2/48
+  shutdown
+  no switchport
+  mac-address 0000.0000.002f
+
+interface Ethernet3/1
+  switchport
+  no shutdown
+
+interface Ethernet3/2
+  switchport
+  no shutdown
+
+interface Ethernet3/3
+  switchport
+  no shutdown
+
+interface Ethernet3/4
+  switchport
+  no shutdown
+
+interface Ethernet3/5
+  switchport
+  no shutdown
+
+interface Ethernet3/6
+  switchport
+  no shutdown
+
+interface Ethernet3/7
+  switchport
+  no shutdown
+
+interface Ethernet3/8
+  switchport
+  no shutdown
+
+interface Ethernet3/9
+  switchport
+  no shutdown
+
+interface Ethernet3/10
+  switchport
+  no shutdown
+
+interface Ethernet3/11
+  switchport
+  no shutdown
+
+interface Ethernet3/12
+  switchport
+  no shutdown
+
+interface Ethernet3/13
+  switchport
+  no shutdown
+
+interface Ethernet3/14
+  switchport
+  no shutdown
+
+interface Ethernet3/15
+  switchport
+  no shutdown
+
+interface Ethernet3/16
+  switchport
+  no shutdown
+
+interface Ethernet3/17
+  switchport
+  no shutdown
+
+interface Ethernet3/18
+  switchport
+  no shutdown
+
+interface Ethernet3/19
+  switchport
+  no shutdown
+
+interface Ethernet3/20
+  switchport
+  no shutdown
+
+interface Ethernet3/21
+  switchport
+  no shutdown
+
+interface Ethernet3/22
+  switchport
+  no shutdown
+
+interface Ethernet3/23
+  switchport
+  no shutdown
+
+interface Ethernet3/24
+  switchport
+  no shutdown
+
+interface Ethernet3/25
+  switchport
+  no shutdown
+
+interface Ethernet3/26
+  switchport
+  no shutdown
+
+interface Ethernet3/27
+  switchport
+  no shutdown
+
+interface Ethernet3/28
+  switchport
+  no shutdown
+
+interface Ethernet3/29
+  switchport
+  no shutdown
+
+interface Ethernet3/30
+  switchport
+  no shutdown
+
+interface Ethernet3/31
+  switchport
+  no shutdown
+
+interface Ethernet3/32
+  switchport
+  no shutdown
+
+interface Ethernet3/33
+  switchport
+  no shutdown
+
+interface Ethernet3/34
+  switchport
+  no shutdown
+
+interface Ethernet3/35
+  switchport
+  no shutdown
+
+interface Ethernet3/36
+  switchport
+  no shutdown
+
+interface Ethernet3/37
+  switchport
+  no shutdown
+
+interface Ethernet3/38
+  switchport
+  no shutdown
+
+interface Ethernet3/39
+  switchport
+  no shutdown
+
+interface Ethernet3/40
+  switchport
+  no shutdown
+
+interface Ethernet3/41
+  switchport
+  no shutdown
+
+interface Ethernet3/42
+  switchport
+  no shutdown
+
+interface Ethernet3/43
+  switchport
+  no shutdown
+
+interface Ethernet3/44
+  switchport
+  no shutdown
+
+interface Ethernet3/45
+  switchport
+  no shutdown
+
+interface Ethernet3/46
+  switchport
+  no shutdown
+
+interface Ethernet3/47
+  switchport
+  no shutdown
+
+interface Ethernet3/48
+  switchport
+  no shutdown
+
+interface Ethernet4/1
+  switchport
+
+interface Ethernet4/2
+  switchport
+
+interface Ethernet4/3
+  switchport
+
+interface Ethernet4/4
+  switchport
+
+interface Ethernet4/5
+  switchport
+
+interface Ethernet4/6
+  switchport
+
+interface Ethernet4/7
+  switchport
+
+interface Ethernet4/8
+  switchport
+
+interface Ethernet4/9
+  switchport
+
+interface Ethernet4/10
+  switchport
+
+interface Ethernet4/11
+  switchport
+
+interface Ethernet4/12
+  switchport
+
+interface Ethernet4/13
+  switchport
+
+interface Ethernet4/14
+  switchport
+
+interface Ethernet4/15
+  switchport
+
+interface Ethernet4/16
+  switchport
+
+interface Ethernet4/17
+  switchport
+
+interface Ethernet4/18
+  switchport
+
+interface Ethernet4/19
+  switchport
+
+interface Ethernet4/20
+  switchport
+
+interface Ethernet4/21
+  switchport
+
+interface Ethernet4/22
+  switchport
+
+interface Ethernet4/23
+  switchport
+
+interface Ethernet4/24
+  switchport
+
+interface Ethernet4/25
+  switchport
+
+interface Ethernet4/26
+  switchport
+
+interface Ethernet4/27
+  switchport
+
+interface Ethernet4/28
+  switchport
+
+interface Ethernet4/29
+  switchport
+
+interface Ethernet4/30
+  switchport
+
+interface Ethernet4/31
+  switchport
+
+interface Ethernet4/32
+  switchport
+
+interface Ethernet4/33
+  switchport
+
+interface Ethernet4/34
+  switchport
+
+interface Ethernet4/35
+  switchport
+
+interface Ethernet4/36
+  switchport
+
+interface Ethernet4/37
+  switchport
+
+interface Ethernet4/38
+  switchport
+
+interface Ethernet4/39
+  switchport
+
+interface Ethernet4/40
+  switchport
+
+interface Ethernet4/41
+  switchport
+
+interface Ethernet4/42
+  switchport
+
+interface Ethernet4/43
+  switchport
+
+interface Ethernet4/44
+  switchport
+
+interface Ethernet4/45
+  switchport
+
+interface Ethernet4/46
+  switchport
+
+interface Ethernet4/47
+  switchport
+
+interface Ethernet4/48
+  switchport
+
+interface loopback0
+  ip address 2.2.2.2/32
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+line console
+line vty
+boot kickstart bootflash:/titanium-d1-kickstart.7.3.0.D1.1.bin
+boot system bootflash:/titanium-d1.7.3.0.D1.1.bin 
+router ospf 1</entry>
+        </extensions>
+        <interface id="0" name="Ethernet2/1"/>
+        <interface id="1" name="Ethernet2/2"/>
+        <interface id="2" name="Ethernet2/3"/>
+    </node>
+    <node name="nx-osv9000-1" type="SIMPLE" subtype="NX-OSv 9000" location="546,654">
+        <extensions>
+            <entry key="config" type="String">!Command: show running-config
+!Time: Mon Mar  5 08:59:16 2018
+
+version 7.0(3)I7(1)
+hostname leaf1
+vdc leaf1 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 128 maximum 128
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+nv overlay evpn
+feature ospf
+feature pim
+feature vn-segment-vlan-based
+feature nv overlay
+
+no password strength-check
+username admin password 5 $5$JKBGAE$EdKGBbgAF1bSnaXTT3.ROJPPJ4U6Yc1iRVRA1snJgu6  role network-admin
+ip domain-lookup
+snmp-server user admin network-admin auth md5 0xaab26e99f431f9081188f7de92e44884 priv 0xaab26e99f431f9081188f7de92e44884 localizedkey
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+
+ip pim rp-address 2.2.2.2 group-list 224.0.0.0/4
+ip pim ssm range 232.0.0.0/8
+vlan 1,100,102
+vlan 100
+  vn-segment 100
+vlan 102
+  vn-segment 10200
+
+vrf context management
+
+interface nve1
+  no shutdown
+  source-interface loopback0
+  member vni 100
+    mcast-group 239.239.239.239
+  member vni 10200 mcast-group 239.239.239.239
+
+interface Ethernet1/1
+
+interface Ethernet1/2
+  no switchport
+  mac-address 5e00.0003.1007
+  ip address 192.12.12.11/24
+  ip ospf network point-to-point
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 100,102
+
+interface Ethernet1/4
+
+interface Ethernet1/5
+
+interface Ethernet1/6
+
+interface Ethernet1/7
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface Ethernet1/55
+
+interface Ethernet1/56
+
+interface Ethernet1/57
+
+interface Ethernet1/58
+
+interface Ethernet1/59
+
+interface Ethernet1/60
+
+interface Ethernet1/61
+
+interface Ethernet1/62
+
+interface Ethernet1/63
+
+interface Ethernet1/64
+
+interface mgmt0
+  shutdown force
+  vrf member management
+
+interface loopback0
+  ip address 11.11.11.11/32
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+line console
+line vty
+router ospf 1</entry>
+        </extensions>
+        <interface id="0" name="Ethernet1/1"/>
+        <interface id="1" name="Ethernet1/2"/>
+        <interface id="2" name="Ethernet1/3"/>
+    </node>
+    <node name="nx-osv9000-2" type="SIMPLE" subtype="NX-OSv 9000" location="879,648">
+        <extensions>
+            <entry key="config" type="String">!Command: show running-config
+!Time: Mon Mar  5 08:59:16 2018
+
+version 7.0(3)I7(1)
+hostname leaf2
+vdc leaf2 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 128 maximum 128
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+nv overlay evpn
+feature ospf
+feature pim
+feature vn-segment-vlan-based
+feature nv overlay
+
+no password strength-check
+username admin password 5 $5$BBEOMF$4Sk4/bG45.VG29RJTTAcfukf5cAqO8HyRXI8hq0e5f6  role network-admin
+ip domain-lookup
+snmp-server user admin network-admin auth md5 0x3c3a564e049d1e429cd2e81f7f03ebfb priv 0x3c3a564e049d1e429cd2e81f7f03ebfb localizedkey
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+
+ip pim rp-address 2.2.2.2 group-list 224.0.0.0/4
+ip pim ssm range 232.0.0.0/8
+vlan 1,100,102
+vlan 100
+  vn-segment 100
+vlan 102
+  vn-segment 10200
+
+vrf context management
+
+interface nve1
+  no shutdown
+  source-interface loopback0
+  member vni 100
+    mcast-group 239.239.239.239
+  member vni 10200
+    mcast-group 239.239.239.239
+
+interface Ethernet1/1
+
+interface Ethernet1/2
+  no switchport
+  mac-address 5e00.0003.2007
+  ip address 192.22.22.22/24
+  ip ospf network point-to-point
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 100,102
+
+interface Ethernet1/4
+
+interface Ethernet1/5
+
+interface Ethernet1/6
+
+interface Ethernet1/7
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface Ethernet1/55
+
+interface Ethernet1/56
+
+interface Ethernet1/57
+
+interface Ethernet1/58
+
+interface Ethernet1/59
+
+interface Ethernet1/60
+
+interface Ethernet1/61
+
+interface Ethernet1/62
+
+interface Ethernet1/63
+
+interface Ethernet1/64
+
+interface mgmt0
+  vrf member management
+
+interface loopback0
+  ip address 22.22.22.22/32
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+line console
+line vty
+router ospf 1</entry>
+        </extensions>
+        <interface id="0" name="Ethernet1/1"/>
+        <interface id="1" name="Ethernet1/2"/>
+        <interface id="2" name="Ethernet1/3"/>
+    </node>
+    <node name="nx-osv9000-3" type="SIMPLE" subtype="NX-OSv 9000" location="1194,653">
+        <extensions>
+            <entry key="config" type="String">!Command: show running-config
+!Time: Mon Mar  5 08:59:14 2018
+
+version 7.0(3)I7(1)
+hostname leaf3
+vdc leaf3 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 128 maximum 128
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+nv overlay evpn
+feature ospf
+feature bgp
+feature pim
+feature vn-segment-vlan-based
+feature nv overlay
+
+no password strength-check
+username admin password 5 $5$HGDONE$hvR6FB8FlHSsQ6l.ALyNPmsgri0E3ulhetMG93BV.26  role network-admin
+ip domain-lookup
+snmp-server user admin network-admin auth md5 0xc7f1584c2aa1016bf37a81982b8c0c92 priv 0xc7f1584c2aa1016bf37a81982b8c0c92 localizedkey
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+
+ip pim rp-address 2.2.2.2 group-list 224.0.0.0/4
+ip pim ssm range 232.0.0.0/8
+vlan 1,100
+vlan 100
+  vn-segment 100
+
+vrf context management
+
+interface nve1
+  no shutdown
+  source-interface loopback0
+  member vni 100
+    mcast-group 239.239.239.239
+
+interface Ethernet1/1
+
+interface Ethernet1/2
+  no switchport
+  mac-address 5e00.0003.3007
+  ip address 192.32.32.33/24
+  ip ospf network point-to-point
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet1/3
+  switchport mode trunk
+  switchport trunk allowed vlan 100
+
+interface Ethernet1/4
+
+interface Ethernet1/5
+
+interface Ethernet1/6
+
+interface Ethernet1/7
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface Ethernet1/55
+
+interface Ethernet1/56
+
+interface Ethernet1/57
+
+interface Ethernet1/58
+
+interface Ethernet1/59
+
+interface Ethernet1/60
+
+interface Ethernet1/61
+
+interface Ethernet1/62
+
+interface Ethernet1/63
+
+interface Ethernet1/64
+
+interface mgmt0
+  vrf member management
+
+interface loopback0
+  ip address 33.33.33.33/24
+  ip router ospf 1 area 0.0.0.0
+  ip pim sparse-mode
+line console
+line vty
+router ospf 1
+router bgp 100
+  address-family ipv4 unicast
+  neighbor 2.2.2.2
+    remote-as 100
+    update-source loopback0</entry>
+        </extensions>
+        <interface id="0" name="Ethernet1/1"/>
+        <interface id="1" name="Ethernet1/2"/>
+        <interface id="2" name="Ethernet1/3"/>
+    </node>
+    <node name="iosv-1" type="SIMPLE" subtype="IOSv" location="553,843">
+        <extensions>
+            <entry key="config" type="String">!
+! Last configuration change at 08:14:50 UTC Mon Mar 5 2018
+!
+version 15.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+ ip ospf 100 area 0
+!
+interface GigabitEthernet0/0
+ ip address 10.255.1.64 255.255.0.0
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1.100
+ encapsulation dot1Q 100
+ ip address 192.168.1.1 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 100 area 0
+!
+interface GigabitEthernet0/1.102
+ encapsulation dot1Q 102
+ ip address 102.102.102.1 255.255.255.0
+!
+router ospf 100
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+ipv6 ioam timestamp
+!
+!
+!
+control-plane
+!
+banner exec `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+banner incoming `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+banner login `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+no scheduler allocate
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+    </node>
+    <node name="iosv-2" type="SIMPLE" subtype="IOSv" location="885,828">
+        <extensions>
+            <entry key="config" type="String">!
+! Last configuration change at 08:07:00 UTC Mon Mar 5 2018
+!
+version 15.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 10.255.1.65 255.255.0.0
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1.100
+ encapsulation dot1Q 100
+ ip address 192.168.1.2 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 100 area 0
+!
+interface GigabitEthernet0/1.102
+ encapsulation dot1Q 102
+ ip address 102.102.102.2 255.255.255.0
+!
+router ospf 100
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+ipv6 ioam timestamp
+!
+!
+!
+control-plane
+!
+banner exec `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+banner incoming `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+banner login `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+no scheduler allocate
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+    </node>
+    <node name="iosv-3" type="SIMPLE" subtype="IOSv" location="1214,825">
+        <extensions>
+            <entry key="config" type="String">!
+! Last configuration change at 08:05:30 UTC Mon Mar 5 2018
+!
+version 15.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 10.255.1.66 255.255.0.0
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1.100
+ encapsulation dot1Q 100
+ ip address 192.168.1.3 255.255.255.0
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+ipv6 ioam timestamp
+!
+!
+!
+control-plane
+!
+banner exec `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+banner incoming `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+banner login `
+**************************************************************************
+* IOSv - Cisco Systems Confidential                                      *
+*                                                                        *
+* Supplemental End User License Restrictions                             *
+*                                                                        *
+* This IOSv software is provided AS-IS without warranty of any kind.     *
+* Under no circumstances may this software be used separate from         *
+* the Cisco Modeling Labs Software that this software was provided       *
+*  with, or deployed or used as part of a production environment.        *
+*                                                                        *
+* By using the software, you agree to abide by the terms and             *
+* conditions of the Cisco End User License Agreement at                  *
+* http://www.cisco.com/go/eula.                                          *
+*                                                                        *
+* Unauthorized use or distribution of this software is expressly         *
+* prohibited.                                                            *
+**************************************************************************
+`
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+no scheduler allocate
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+    </node>
+    <annotations/>
+    <connection dst="/virl:topology/virl:node[1]/virl:interface[1]" src="/virl:topology/virl:node[3]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[2]/virl:interface[1]" src="/virl:topology/virl:node[3]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[1]/virl:interface[2]" src="/virl:topology/virl:node[4]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[2]/virl:interface[2]" src="/virl:topology/virl:node[4]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[1]/virl:interface[3]" src="/virl:topology/virl:node[5]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[2]/virl:interface[3]" src="/virl:topology/virl:node[5]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[3]/virl:interface[3]" src="/virl:topology/virl:node[6]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[4]/virl:interface[3]" src="/virl:topology/virl:node[7]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[5]/virl:interface[3]" src="/virl:topology/virl:node[8]/virl:interface[1]"/>
+</topology>
